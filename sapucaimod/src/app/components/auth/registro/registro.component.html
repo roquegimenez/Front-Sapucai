@@ -30,7 +30,7 @@
         <div class="mb-3">
           <label for="password" class="form-label">Password</label>
           <input type="password" id="password" formControlName="password" class="form-control" placeholder="Contraseña (mínimo 6 caracteres)">
-          <div *ngIf="registerForm.get('password')?.hasError('required')" class="text-lg-start alert alert-danger mt-2">
+          <div [hidden]="password.valid || password.pristine" *ngIf="registerForm.get('password')?.hasError('required')" class="text-lg-start alert alert-danger mt-2">
             El password es obligatorio. Mínimo 6 caracteres.
           </div>
         </div>
