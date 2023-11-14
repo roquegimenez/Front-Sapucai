@@ -4,15 +4,13 @@
     <div class="card-header text-justify">
       <form [formGroup]="registerForm" (ngSubmit)="crearUsuario()">
     <!-- Nombre -->
-<!-- Nombre -->
 <div class="mb-3">
   <label for="nombre" class="form-label">Nombre</label>
-  <input type="text" id="nombre" formControlName="nombre" class="form-control" placeholder="Nombre" (focus)="marcarComoEnviado()">
-  <div *ngIf="formSubmitted && registerForm.get('nombre')?.hasError('required')" class="text-lg-start alert alert-danger mt-2">
+  <input type="text" id="nombre" formControlName="nombre" class="form-control" placeholder="Nombre">
+  <div *ngIf="registerForm.get('nombre')?.hasError('required')" class="text-lg-start alert alert-danger mt-2">
     El nombre es obligatorio.
   </div>
 </div>
-
 
 
         <!-- Email -->
