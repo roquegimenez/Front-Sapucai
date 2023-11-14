@@ -20,6 +20,7 @@ import { IngresarsaldoComponent } from './components/auth/ingresarsaldo/ingresar
 import { SesionComponent } from './components/auth/sesion/sesion.component';
 import { ListaComponent } from './components/auth/lista/lista.component';
 import { ModificarComponent } from './components/auth/modificar/modificar.component';
+import { AyudaComponent } from './components/inicio/ayuda/ayuda.component';
 
 
 
@@ -45,6 +46,7 @@ import { ModificarComponent } from './components/auth/modificar/modificar.compon
     SesionComponent,
     ListaComponent,
     ModificarComponent,
+    AyudaComponent,
   ],
 
   imports: [
