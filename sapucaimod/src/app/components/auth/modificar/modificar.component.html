@@ -1,27 +1,50 @@
-<!-- modificar.component.html -->
+<section class="container">
+  <h2 class="text-center mb-4">Modificar Usuario</h2>
+  <div class="card">
+    <div class="card-header text-justify">
+      <form [formGroup]="usuarioForm" (ngSubmit)="guardarCambios()">
+        <!-- ID -->
+        <div class="mb-3">
+          <label for="id" class="form-label">ID</label>
+          <input type="text" id="id" formControlName="id" class="form-control" placeholder="ID" readonly>
+        </div>
 
-<div class="container mt-5">
-  <h2>Modificar Usuario</h2>
-  <form [formGroup]="usuarioForm" (ngSubmit)="guardarCambios()">
-    <div class="form-group">
-      <label for="id">ID:</label>
-      <input type="number" class="form-control" id="id" formControlName="id" placeholder="Ingrese el ID">
-      <button type="button" class="btn btn-primary" (click)="cargarUsuario()">Cargar Usuario</button>
-    </div>
-    <div class="form-group">
-      <label for="nombre">Nombre:</label>
-      <input type="text" class="form-control" id="nombre" formControlName="nombre">
-    </div>
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" formControlName="email">
-    </div>
-    <div class="form-group">
-      <label for="password">Password:</label>
-      <input type="password" class="form-control" id="password" formControlName="password">
-    </div>
-    <!-- Otros campos del formulario -->
+        <!-- Nombre -->
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" id="nombre" formControlName="nombre" class="form-control" placeholder="Nombre">
+          <div class="text-start alert alert-danger mt-2" [hidden]="nombre.valid || nombre.pristine">
+            El nombre es obligatorio.
+          </div>
+        </div>
 
-    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
-  </form>
-</div>
+        <!-- Email -->
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" formControlName="email" class="form-control" placeholder="correo@algo.com">
+          <div [hidden]="email.valid || email.pristine" *ngIf="usuarioForm.get('email')?.hasError('required')" class="text-start alert alert-danger mt-2">
+            El email es obligatorio.
+          </div>
+          <div *ngIf="usuarioForm.get('email')?.hasError('email')" class="text-start alert alert-danger mt-2">
+            El email debe ser válido.
+          </div>
+        </div>
+
+        <!-- Password -->
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" id="password" formControlName="password" class="form-control" placeholder="Contraseña (mínimo 6 caracteres)">
+          <div [hidden]="password.valid || password.pristine" *ngIf="usuarioForm.get('password')?.hasError('required')" class="text-start alert alert-danger mt-2">
+            El password es obligatorio. Mínimo 6 caracteres.
+          </div>
+        </div>
+
+        <!-- Botones -->
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button type="submit" class="btn btn-primary" style="margin-top: 20px; background-color: #4caf50;">Guardar Cambios</button>
+          <button type="button" class="btn btn-primary" style="margin-top: 20px; background-color: orange;">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

@@ -15,6 +15,7 @@ export class ModificarComponent implements OnInit {
   usuarioId: number = 0;
   usuarioForm!: FormGroup;
 
+
   constructor(
     private route: ActivatedRoute,
     private usuarioService: UsuarioService,
