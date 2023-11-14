@@ -1,3 +1,5 @@
+// modificar.component.ts
+
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UsuarioService } from '../../../services/usuario.service';
@@ -15,17 +17,16 @@ export class ModificarComponent implements OnInit {
   usuarioId: number = 0;
   usuarioForm!: FormGroup;
 
-
   constructor(
     private route: ActivatedRoute,
     private usuarioService: UsuarioService,
     private formBuilder: FormBuilder,
-    private router: Router  // Agrega el servicio Router
+    private router: Router
   ) {}
 
   ngOnInit(): void {
     this.usuarioForm = this.formBuilder.group({
-      id: [null, Validators.required], // Deja este campo en blanco
+      id: [null, Validators.required],
       nombre: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       password: [''],
@@ -51,7 +52,6 @@ export class ModificarComponent implements OnInit {
     if (this.usuarioForm.valid) {
       const datosModificados = this.usuarioForm.value;
 
-      // Crear un nuevo objeto Usuario con las propiedades necesarias
       const usuarioConvertido: Usuario = {
         ID_Usuario: datosModificados.id || 0,
         Nombre: datosModificados.nombre || '',
@@ -63,9 +63,7 @@ export class ModificarComponent implements OnInit {
       this.usuarioService.actualizarUsuario(usuarioConvertido.ID_Usuario, usuarioConvertido).subscribe(
         (respuesta) => {
           console.log('Usuario actualizado correctamente:', respuesta);
-
-          // Redirigir a la página de dashboard después de la actualización exitosa
-          this.router.navigate(['/dashboard']);  // Ajusta la ruta según tu configuración
+          this.router.navigate(['/dashboard']);
         },
         (error) => {
           console.error('Error al actualizar el usuario:', error);
