@@ -21,7 +21,7 @@ builder.Services.AddCors(options =>
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<MiDbContext>(
-  options => options.UseSqlServer("Server=NOTEBOOK-BANGHO;Database=Sapucai;Integrated Security=True;TrustServerCertificate=True;"));
+  options => options.UseSqlServer("Server=JORGE;Database=Sapucai;Integrated Security=True;TrustServerCertificate=True;"));
 
 // Agregar configuración de Swagger
 builder.Services.AddSwaggerGen(c =>
