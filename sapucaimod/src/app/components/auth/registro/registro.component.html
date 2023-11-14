@@ -26,14 +26,18 @@
           </div>
         </div>
 
-        <!-- Password -->
-        <div class="mb-3">
-          <label for="password" class="form-label">Password</label>
-          <input type="password" id="password" formControlName="password" class="form-control" placeholder="Contraseña (mínimo 6 caracteres)">
-          <div [hidden]="password.valid || password.pristine" *ngIf="registerForm.get('password')?.hasError('required')" class="text-lg-start alert alert-danger mt-2">
-            El password es obligatorio. Mínimo 6 caracteres.
-          </div>
-        </div>
+
+<!-- Password -->
+<div class="mb-3">
+  <label for="password" class="form-label">Password</label>
+  <input type="password" id="password" formControlName="password" class="form-control" placeholder="Contraseña (mínimo 6 caracteres)">
+  <div [hidden]="password.valid || password.pristine" *ngIf="registerForm.get('password')?.hasError('required')" class="text-lg-start alert alert-danger mt-2">
+    El password es obligatorio. Mínimo 6 caracteres.
+  </div>
+  <div [hidden]="password.valid || password.pristine" *ngIf="password.value && password.value.length < 6" class="text-lg-start alert alert-danger mt-2">
+    El password debe tener al menos 6 caracteres.
+  </div>
+</div>
 
         <!-- Botones -->
         <button type="submit" class="btn btn-primary" style="margin-top: 20px; background-color: #4caf50;">Guardar</button>
