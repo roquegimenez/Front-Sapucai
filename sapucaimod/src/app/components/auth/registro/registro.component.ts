@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { Usuario } from 'src/app/models/usuario.model';
 import { registerForm } from 'interfaces/register-form.intefaces';
-
-
 
 @Component({
   selector: 'app-registro',
@@ -14,6 +12,12 @@ import { registerForm } from 'interfaces/register-form.intefaces';
   styleUrls: ['./registro.component.css']
 })
 export class RegistroComponent {
+
+  // Definir controles como propiedades del componente
+  nombre = new FormControl('', Validators.required);
+  email = new FormControl('', [Validators.required, Validators.email]);
+  password = new FormControl('', [Validators.required, Validators.minLength(6)]);
+
   public formSubmitted = false;
   public registerForm: FormGroup;
   usuario: Usuario = new Usuario(1);
@@ -23,30 +27,24 @@ export class RegistroComponent {
     private usuarioService: UsuarioService,
     private router: Router
   ) {
+    // Agregar controles al FormGroup durante la inicialización
     this.registerForm = this.fb.group({
-      nombre: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
-
+      nombre: this.nombre,
+      email: this.email,
+      password: this.password,
     });
   }
-
-  // No debes declarar nuevoUsuario, nuevoRegistro, o llamar al servicio aquí
-  // Estas declaraciones deben estar dentro de métodos o funciones específicas
 
   crearUsuario() {
     this.formSubmitted = true;
     if (this.registerForm.valid) {
-      // Crear un nuevo objeto registerForm y asignar los valores del formulario
       const nuevoRegistro: registerForm = {
         ID_Usuario: undefined,
         Nombre: this.registerForm.get('nombre')?.value,
         Email: this.registerForm.get('email')?.value,
         Password: this.registerForm.get('password')?.value,
-
       };
 
-      // Enviar los datos del nuevo usuario al servicio
       this.usuarioService.crearUsuario(nuevoRegistro).subscribe({
         next: (resp) => {
           console.log('Usuario registrado con éxito', resp);
