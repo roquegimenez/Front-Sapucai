@@ -649,3 +649,15 @@ C:\Users\Usuario\Documents\sapucai-angular\conectado - back-front\sapucaimod\src
 C:\Users\Usuario\Documents\sapucai-angular\conectado - back-front\sapucaimod\src\app\backend\miBilletera\obj\Debug\net7.0\miBilletera.pdb
 C:\Users\Usuario\Documents\sapucai-angular\conectado - back-front\sapucaimod\src\app\backend\miBilletera\obj\Debug\net7.0\miBilletera.genruntimeconfig.cache
 C:\Users\Usuario\Documents\sapucai-angular\conectado - back-front\sapucaimod\src\app\backend\miBilletera\obj\Debug\net7.0\ref\miBilletera.dll
+C:\Users\Usuario\Documents\Practica\Repositorio clonado\Front-Sapucai\sapucaimod\src\app\backend\miBilletera\obj\Debug\net7.0\miBilletera.csproj.AssemblyReference.cache
+C:\Users\Usuario\Documents\Practica\Repositorio clonado\Front-Sapucai\sapucaimod\src\app\backend\miBilletera\obj\Debug\net7.0\miBilletera.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Documents\Practica\Repositorio clonado\Front-Sapucai\sapucaimod\src\app\backend\miBilletera\obj\Debug\net7.0\miBilletera.AssemblyInfoInputs.cache
+C:\Users\Usuario\Documents\Practica\Repositorio clonado\Front-Sapucai\sapucaimod\src\app\backend\miBilletera\obj\Debug\net7.0\miBilletera.AssemblyInfo.cs
+C:\Users\Usuario\Documents\Practica\Repositorio clonado\Front-Sapucai\sapucaimod\src\app\backend\miBilletera\obj\Debug\net7.0\miBilletera.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\Practica\Repositorio clonado\Front-Sapucai\sapucaimod\src\app\backend\miBilletera\obj\Debug\net7.0\miBilletera.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Usuario\Documents\Practica\Repositorio clonado\Front-Sapucai\sapucaimod\src\app\backend\miBilletera\obj\Debug\net7.0\miBilletera.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Usuario\Documents\Practica\Repositorio clonado\Front-Sapucai\sapucaimod\src\app\backend\miBilletera\obj\Debug\net7.0\miBilletera.RazorAssemblyInfo.cache
+C:\Users\Usuario\Documents\Practica\Repositorio clonado\Front-Sapucai\sapucaimod\src\app\backend\miBilletera\obj\Debug\net7.0\miBilletera.RazorAssemblyInfo.cs
+C:\Users\Usuario\Documents\Practica\Repositorio clonado\Front-Sapucai\sapucaimod\src\app\backend\miBilletera\obj\Debug\net7.0\miBilletera.dll
+C:\Users\Usuario\Documents\Practica\Repositorio clonado\Front-Sapucai\sapucaimod\src\app\backend\miBilletera\obj\Debug\net7.0\refint\miBilletera.dll
+C:\Users\Usuario\Documents\Practica\Repositorio clonado\Front-Sapucai\sapucaimod\src\app\backend\miBilletera\obj\Debug\net7.0\miBilletera.pdb

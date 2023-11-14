@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mlO7hHVC6vOKCTVJmYRGJboXKLOYb6O20yPUTCatttq/JSyCTSBq2MowRMQHO/Uc1zFSWOXdHeOeQxmGyPZ8Yw==",
+  "dgSpecHash": "r0fW5omodcj0aoHF/TrKw9bNpQN69Wn6iqPMon0HLbLyBjP/KA4VChJ4I7SiJn0NgzyerrI2rxGAXQ3EykNLHQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\Documents\\sapucai-angular\\conectado - back-front\\sapucaimod\\src\\app\\backend\\miBilletera\\miBilletera.csproj",
+  "projectFilePath": "C:\\Users\\Usuario\\Documents\\Practica\\Repositorio clonado\\Front-Sapucai\\sapucaimod\\src\\app\\backend\\miBilletera\\miBilletera.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
